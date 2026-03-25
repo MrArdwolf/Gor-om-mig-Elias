@@ -1,0 +1,44 @@
+@use "../utils" as *;
+@use "../base/typography" as *;
+
+#app {
+    width: 100%;
+    max-width: 1440px;
+    padding: 36px 48px;
+    background-color: $background-color;
+    display: grid;
+    row-gap: 24px;
+    column-gap: 32px;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "header header"
+    "nav nav"
+    "aside main"
+    ". main"
+    "footer footer";
+    
+
+    main {
+        grid-area: main;
+    }
+
+    footer {
+        grid-area: footer;
+    }
+
+
+    @media (max-width: 600px) {
+        // grid-template-columns: 1fr;
+        // grid-template-rows: auto;
+        // grid-template-areas: 
+        // "header"
+        // "aside"
+        // "main"
+        // "footer";
+
+        display: flex;
+        flex-direction: column;
+        
+    } 
+}

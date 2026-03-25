@@ -1,0 +1,34 @@
+@use "../utils" as *;
+@use "../base/typography" as *;
+
+header {
+    width: 100%;
+    background-color: $primary-color;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 16px;
+    color: $black-color;
+    grid-area: header;
+
+    h1 {
+        @include font-heading-large;
+    }
+
+    h2 {
+        @include font-heading;
+    }
+
+    @media (max-width: 600px) {
+        flex-direction: column;
+        gap: 16px;
+
+        h1 {
+            @include font-heading;
+        }
+
+        h2 {
+            @include font-heading-small;
+        }
+    }
+}

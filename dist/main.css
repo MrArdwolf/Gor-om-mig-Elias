@@ -1,0 +1,226 @@
+@import url("https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #1e1e1e;
+  color: #ffffff;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+}
+
+.primary-button {
+  background-color: #25E7A3;
+  color: #000000;
+  padding: 8px 24px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  border: none;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+}
+.primary-button:hover {
+  cursor: pointer;
+  background-color: #1AC7BE;
+}
+
+.link-button {
+  background-color: transparent;
+  color: #25E7A3;
+  padding: 0 0;
+  border-radius: 8px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  border: none;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  box-shadow: none;
+}
+.link-button:hover {
+  cursor: pointer;
+  color: #1AC7BE;
+}
+
+.error-button {
+  background-color: #f52727;
+  color: #000000;
+  padding: 8px 24px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  border: none;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+}
+.error-button:hover {
+  cursor: pointer;
+  background-color: #ff4d4d;
+}
+
+.working-button {
+  background-color: #ffac4d;
+  color: #000000;
+  padding: 8px 24px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  border: none;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+}
+.working-button:hover {
+  cursor: pointer;
+  background-color: #ffbf80;
+}
+
+nav {
+  display: flex;
+  gap: 32px;
+  justify-content: center;
+  grid-area: nav;
+}
+nav a {
+  background-color: #1e1e1e;
+  color: #25E7A3;
+  width: 100%;
+  padding: 16px;
+  border-radius: 8px;
+  text-align: center;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+}
+nav a:hover {
+  color: #1AC7BE;
+}
+@media (max-width: 600px) {
+  nav {
+    display: none;
+  }
+}
+
+header {
+  width: 100%;
+  background-color: #25E7A3;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 16px;
+  color: #000000;
+  grid-area: header;
+}
+header h1 {
+  font-family: "Inter", sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+}
+header h2 {
+  font-family: "Inter", sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+}
+@media (max-width: 600px) {
+  header {
+    flex-direction: column;
+    gap: 16px;
+  }
+  header h1 {
+    font-family: "Inter", sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+  }
+  header h2 {
+    font-family: "Inter", sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+  }
+}
+
+aside {
+  grid-area: aside;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  background-color: #1e1e1e;
+  padding: 16px;
+  border-radius: 16px;
+  text-align: center;
+  align-self: flex-start;
+}
+aside a {
+  color: #25E7A3;
+}
+aside a:hover {
+  color: #1AC7BE;
+}
+aside h3 {
+  font-family: "Inter", sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+}
+aside .img-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+aside .img-container img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+main {
+  grid-area: main;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  background-color: #1e1e1e;
+  padding: 16px;
+  border-radius: 16px;
+}
+main .sub-heading {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: center;
+}
+main .sub-heading h3 {
+  font-family: "Inter", sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+}
+main a {
+  color: #25E7A3;
+}
+main a:hover {
+  color: #1AC7BE;
+}
+
+#app {
+  width: 100%;
+  max-width: 1440px;
+  padding: 36px 48px;
+  background-color: #282828;
+  display: grid;
+  row-gap: 24px;
+  column-gap: 32px;
+  grid-template-columns: 1fr 4fr;
+  grid-template-rows: auto;
+  grid-template-areas: "header header" "nav nav" "aside main" ". main" "footer footer";
+}
+#app main {
+  grid-area: main;
+}
+#app footer {
+  grid-area: footer;
+}
+@media (max-width: 600px) {
+  #app {
+    display: flex;
+    flex-direction: column;
+  }
+}/*# sourceMappingURL=main.css.map */

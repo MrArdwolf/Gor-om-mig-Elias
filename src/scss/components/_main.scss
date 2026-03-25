@@ -1,0 +1,32 @@
+@use "../utils" as *;
+@use "../base/typography" as *;
+
+main {
+    grid-area: main;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    background-color: $page-color;
+    padding: 16px;
+    border-radius: 16px;
+
+    .sub-heading {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        align-items: center;
+
+        h3 {
+            @include font-heading-small;
+        }
+    }
+
+    a {
+        color: $primary-color;
+        
+
+        &:hover {
+            color: $secondary-color;
+        }
+    }
+}

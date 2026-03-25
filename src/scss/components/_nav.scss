@@ -1,0 +1,27 @@
+@use "../utils" as *;
+@use "../base/typography" as *;
+
+nav {
+    display: flex;
+    gap: 32px;
+    justify-content: center;
+    grid-area: nav;
+
+    a {
+        background-color: $page-color;
+        color: $primary-color;
+        width: 100%;
+        padding: 16px;
+        border-radius: 8px;
+        text-align: center;
+        @include font-default;
+
+        &:hover {
+            color: $secondary-color;
+        }
+    }
+
+    @media (max-width: 600px) {
+        display: none;
+    }
+}
