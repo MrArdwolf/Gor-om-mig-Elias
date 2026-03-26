@@ -23,5 +23,63 @@ nav {
 
     @media (max-width: 600px) {
         display: none;
+
+        &.active {
+            display: flex;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: $page-color;
+            flex-direction: column;
+            padding: 16px;
+            z-index: 100;
+        }
+    }
+}
+
+.hamburger-menu {
+    display: none;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 101;
+
+    @media (max-width: 600px) {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 4px;
+    }
+
+    .bar-long {
+        width: 24px;
+        height: 3px;
+        background-color: $primary-color;
+        border-radius: 3px;
+    }
+
+    .bar-short {
+        width: 20px;
+        height: 3px;
+        background-color: $primary-color;
+        border-radius: 3px;
+    }
+
+    &.active {
+        .bar-long {
+            &.top {
+                transform: rotate(45deg) translate(5px, 5px);
+            }
+            &.bottom {
+                transform: rotate(-45deg) translate(5px, -5px);
+            }
+        }
+
+        .bar-short {
+            opacity: 0;
+        }
     }
 }

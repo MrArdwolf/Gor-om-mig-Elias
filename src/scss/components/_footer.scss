@@ -1,0 +1,12 @@
+@use "../utils" as *;
+@use "../base/typography" as *;
+
+footer {
+    grid-area: footer;
+    background-color: $primary-color;
+    color: $black-color;
+    padding: 16px;
+    width: 100%;
+
+    @include font-heading-small;
+}

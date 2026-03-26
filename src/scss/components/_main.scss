@@ -5,7 +5,7 @@ main {
     grid-area: main;
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: 24px;
     background-color: $page-color;
     padding: 16px;
     border-radius: 16px;
@@ -27,6 +27,24 @@ main {
 
         &:hover {
             color: $secondary-color;
+        }
+    }
+
+    .articles {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .article-list {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+
+        p {
+            background-color: $background-color;
+            padding: 8px;
+            border-radius: 8px;
         }
     }
 }
